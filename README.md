@@ -7,7 +7,7 @@ The LMMSE demosaicing algorithm is a learning-based technique. The initial train
   
   2- Spote A., Lapray P.-J., Thomas J.-B., Farup I., Joint demosaicing of colour and polarisation from filter arrays, In 29th Color and Imaging Conference Final Program and Proceedings 2021, Society for Imaging Science and Technology, 2021.</b>
   
-<img src="https://github.com/pjlapray/LMMSE-Demosaicing-for-Polarization-Filter-Array/assets/10449075/37502265-ee02-4e7b-940d-6aadaa094b2e" width=35%>
+<img src="https://github.com/pjlapray/LMMSE-Demosaicing-for-Polarization-Filter-Array/assets/10449075/37502265-ee02-4e7b-940d-6aadaa094b2e" width=45%>
 
 Two scripts are provided as demonstration:
    - The script to use for demosaicing with the furbished pre-trained matrix D is "Script_LMMSE_Demosaicing".

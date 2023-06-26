@@ -5,7 +5,7 @@
 %              Society for Imaging Science and Technology."
 %              2- "Dumoulin R, Lapray P.-J., Thomas J.-B., (2022), Impact of training data on
 %              LMMSE demosaicing for Colour-Polarization Filter Array,  16th International Conference on Signal-Image Technology & Internet-Based Systems (SITIS),
-%              2022, Dijon, France.
+%              2022, Dijon, France."
 
 clc
 close all

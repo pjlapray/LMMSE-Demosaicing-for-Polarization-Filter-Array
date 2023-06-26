@@ -98,8 +98,6 @@ pattern=[1 2
          4 3];
 pattern=pattern-1;
 [height,width]=size(pattern);
-
-%% Compute M1
 M1 = zeros(nh*nw, P*nh*nw);
 vn=(nh-height)/2;
 n_rep=idivide(nh,int32(height))+1;

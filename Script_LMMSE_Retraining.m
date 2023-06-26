@@ -10,7 +10,7 @@
 %              Society for Imaging Science and Technology."
 %              2- "Dumoulin R, Lapray P.-J., Thomas J.-B., (2022), Impact of training data on
 %              LMMSE demosaicing for Colour-Polarization Filter Array,  16th International Conference on Signal-Image Technology & Internet-Based Systems (SITIS),
-%              2022, Dijon, France.
+%              2022, Dijon, France."
 clc
 close all
 clear all
@@ -24,7 +24,7 @@ mosaic = 'pfa';
 %% Load full resolution dataset
 path=pwd();
 folder_path = strcat(path, '/Data/Dataset/');
-nbr_of_img = 12;
+nbr_of_img = 3;
 FullDataset = Load_Dataset(true, folder_path, nbr_of_img,mosaic); % This small dataset is made of 3 images, feel free to add you own or use existing datasets
 
 %% Mosaicking of the dataset

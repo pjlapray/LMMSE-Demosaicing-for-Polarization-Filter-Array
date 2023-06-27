@@ -13,6 +13,6 @@ Two scripts are provided as demonstration:
    - The script to use for demosaicing with the furbished pre-trained matrix D is "Script_LMMSE_Demosaicing.m".
    - If you may want to retrain the demosaicing matrix with your own specific data, use the Script named "Script_LMMSE_retraining.m". Please use the same image structure as in "Data/Dataset". It is recommanded to train with sufficient data (at least 12 images of resolution 1456 × 1088 pixels, see our conference paper from 2022 for more information).
 
-The "Data" folder contains a mosaiced image, a matrix used for demosaicing, along woth a dataset in case of retraining matrix D with the script "Script_LMMSE_training.m".
+The "Data" folder contains a mosaiced image, a matrix used for demosaicing, along woth a dataset in case of retraining matrix D with the script "Script_LMMSE_retraining.m".
 
 The "Function" folder contains Matlab functions needed for retraining.

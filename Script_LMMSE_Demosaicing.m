@@ -13,7 +13,7 @@ clear all
 
 %% Global parameter
 D_Matrix_name = 'D_Matrix.mat'; % If retrained, call D_Matrix_retrained
-Save = false; % true to save the demosaiced image
+Save = true; % true to save the demosaiced image
 
 %% Add path to Matlab for access
 addpath(genpath('Function/'))
@@ -31,7 +31,7 @@ r_superpix = rows/height;                % number of superpixel in a line
 c_superpix = cols/width;                 % number of superpixel in a column
 
 %% Load D_Matrix
-D=load(['Data/D_matrix.mat']).D;
+D=load(['Data/' D_Matrix_name]).D;
 
 %% Demosaicing
 fun = @(x) (reshape(D*x.data(:),height,width,P));
@@ -46,5 +46,9 @@ subplot(2,2,4),imshow(DemosImg(:,:,:,4)),title('Demosaiced image for 135° polar
 
 %% Save result
 if Save == true
-    save(['DemosImg.mat'],'DemosImg','-v7.3');
+    save(['Data/im_demosaiced.mat'],'DemosImg','-v7.3');
+    delete Data/im_demosaiced.tif
+    for i=1:P
+        imwrite(DemosImg(:,:,:,i),'Data/im_demosaiced.tif',"WriteMode","append"); % Multipage tif file (you can use irfanview for ex. to read it)
+    end
 end

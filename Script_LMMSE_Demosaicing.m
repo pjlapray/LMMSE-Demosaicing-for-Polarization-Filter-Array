@@ -31,11 +31,10 @@ r_superpix = rows/height;                % number of superpixel in a line
 c_superpix = cols/width;                 % number of superpixel in a column
 
 %% Load D_Matrix
-D=load(['Data/' D_Matrix_name]).D;
+D = load(['Data/' D_Matrix_name]).D;
 
 %% Demosaicing
-fun = @(x) (reshape(D*x.data(:),height,width,P));
-DemosImg = reshape(blockproc(MosImg,[height,width],fun,BorderSize=[3 3],TrimBorder=false,UseParallel=true),[r_superpix*height c_superpix*width P/4 4]);
+[DemosImg] = Function_LMMSE_Demosaicing(MosImg,D);
 
 %% Show result images
 figure;
@@ -47,7 +46,9 @@ subplot(2,2,4),imshow(DemosImg(:,:,:,4)),title('Demosaiced image for 135° polar
 %% Save result
 if Save == true
     save(['Data/im_demosaiced.mat'],'DemosImg','-v7.3');
-    delete Data/im_demosaiced.tif
+    if exist('Data/im_demosaiced.tif')
+        delete Data/im_demosaiced.tif;
+    end
     for i=1:P
         imwrite(DemosImg(:,:,:,i),'Data/im_demosaiced.tif',"WriteMode","append"); % Multipage tif file (you can use irfanview for ex. to read it)
     end

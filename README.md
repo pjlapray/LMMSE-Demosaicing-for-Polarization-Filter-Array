@@ -1,5 +1,5 @@
 # Demosaicing-PFA-LMMSE
-This code allow you to demosaic a polarimetric image from a filter array sensor with the Linear Minimum Mean Square Error demosaicing algorithm. The arrangement is the Chun polarization pattern from the SONY IMX250 MZR sensor. The code will be readapted for any square arrangement in a future release.
+This code allow you to demosaic a polarimetric image from a filter array sensor with the Linear Minimum Mean Square Error demosaicing algorithm. The arrangement is the Chun polarization pattern from the SONY IMX250MZR sensor. This code can also be applied to SONY IMX264MZR or IMX253MZR. The code will be readapted for any square arrangement in a future release.
 
 The LMMSE demosaicing algorithm is a learning-based technique. The initial training (matrix 'D_matrix.mat' in Data folder) is done with the data used in the publication (training with 12 images from the Wen et al. database). If using the code, please cite these publications:
 
